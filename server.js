@@ -1,7 +1,7 @@
 // Section 1: Variables (1–8)
 // What is the output?
 var a = 10;
-a = 15;- 
+a = 15;
 console.log(a);     //output=15
 
 // What happens here?
