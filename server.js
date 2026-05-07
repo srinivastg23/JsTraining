@@ -6,7 +6,7 @@ console.log(a);     //output=15
 
 // What happens here?
 // let b = 20;
-// let b = 30;         //op=error b is already used in let we cant reuse/reintialise
+// let b = 30;         //op=error b is already used in let we cant redeclare
     
 // What is the output?
 const c = 50;
@@ -126,7 +126,7 @@ console.log(5 + 3);    //op=8
 
 console.log(10 % 3);    //op=1  % it give remainder
 
-console.log(2 ** 3);    //op= 2*3=2*2*2 =8
+console.log(2 ** 3);    //op= 2**3=2*2*2 =8
 
 console.log(10 / 2);    //op=5 gives modulus
 
