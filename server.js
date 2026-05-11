@@ -207,22 +207,22 @@ console.log(typeof(null+5))             //op:5    dt:number
 // Task 3 – Explicit Type Casting
 // Convert the following into Number:
 // "500"
-console.log(Number("500"))
+console.log(Number("500"))              //op=500
 
 // true
-console.log(Number(true))
+console.log(Number(true))               //op=1
 
 // false
-console.log(Number(false))
+console.log(Number(false))      //op=0
 
 // null
-console.log(Number(null))
+console.log(Number(null))       //op=0
 
 // "abc"
-console.log(Number("abc"))
+console.log(Number("abc"))      //op=Nan
 
 // [100]
-console.log(Number([100]))
+console.log(Number([100]))      //op=100
 // Print the outputs.
 
 // Task 4 – Boolean Constructor
