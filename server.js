@@ -454,22 +454,22 @@ console.log(count)
 // ****
 // *****
 for(let i=1; i<=5; i++){
-    let Star=""
+    let star=""
 
     for (let j=1; j<=i; j++){
-        Star+="*"
+        star+="*"
     }
-    console.log(Star)
+    console.log(star)
 }
 // Functions
 // 9. Simple Function
 // Create a function named welcome() that prints:
 // Welcome to JavaScript
 
-function first(){
+function welcome(){
     console.log("Welcome to Javascript")
 }
-first()
+welcome()
 
 // 10. Function with Parameter
 // Create a function that accepts a name and prints:
