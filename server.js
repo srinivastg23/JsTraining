@@ -165,223 +165,401 @@
 // JavaScript Tasks – Type Casting & Flow Control
 // Task 1 – Predict the Output
 // Write the output and datatype for below:
-console.log("10"+5)
-console.log(typeof("10" + 5))                   //op: 105  datatype:string
+// console.log("10"+5)
+// console.log(typeof("10" + 5))                   //op: 105  datatype:string
 
-console.log(10+true)
-console.log(typeof(10 + true))                  //op: 11    datatype:number
+// console.log(10+true)
+// console.log(typeof(10 + true))                  //op: 11    datatype:number
 
-console.log(false+null)
-console.log(typeof(false + null))               //op:0      data:number
+// console.log(false+null)
+// console.log(typeof(false + null))               //op:0      data:number
 
-console.log("Hello" + undefined)
-console.log(typeof("Hello" + undefined))        //op:Helloundefined     datatype:string
+// console.log("Hello" + undefined)
+// console.log(typeof("Hello" + undefined))        //op:Helloundefined     datatype:string
 
-console.log([1,2] + 5)
-console.log(typeof([1,2] + 5))                  //op:1,25   datatype:string
+// console.log([1,2] + 5)
+// console.log(typeof([1,2] + 5))                  //op:1,25   datatype:string
 
-// Task 2 – Implicit Type Casting
-// Print datatype using typeof.
-// Create examples for:
+// // Task 2 – Implicit Type Casting
+// // Print datatype using typeof.
+// // Create examples for:
 
-// String + Number
-console.log("string"+5)
-console.log(typeof("string"+5))         //op:string5    dt:str
+// // String + Number
+// console.log("string"+5)
+// console.log(typeof("string"+5))         //op:string5    dt:str
 
-// Boolean + Number
-console.log(true+5)
-console.log(typeof(true+5))             //op:6    dt:number
+// // Boolean + Number
+// console.log(true+5)
+// console.log(typeof(true+5))             //op:6    dt:number
 
-// Array + String
-console.log([1,2,3]+"server")
-console.log(typeof([1,2,3]+"server"))       //op:1,2,3server    dt:str
+// // Array + String
+// console.log([1,2,3]+"server")
+// console.log(typeof([1,2,3]+"server"))       //op:1,2,3server    dt:str
 
-// Object + Number
-console.log({k:8}+5)
-console.log(typeof({k:8}+5))            //op:[object object]5    dt:str
+// // Object + Number
+// console.log({k:8}+5)
+// console.log(typeof({k:8}+5))            //op:[object object]5    dt:str
 
-// Null + Number
-console.log(null+5)
-console.log(typeof(null+5))             //op:5    dt:number
+// // Null + Number
+// console.log(null+5)
+// console.log(typeof(null+5))             //op:5    dt:number
 
-// Task 3 – Explicit Type Casting
-// Convert the following into Number:
-// "500"
-console.log(Number("500"))              //op=500
+// // Task 3 – Explicit Type Casting
+// // Convert the following into Number:
+// // "500"
+// console.log(Number("500"))              //op=500
 
-// true
-console.log(Number(true))               //op=1
+// // true
+// console.log(Number(true))               //op=1
 
-// false
-console.log(Number(false))      //op=0
+// // false
+// console.log(Number(false))      //op=0
 
-// null
-console.log(Number(null))       //op=0
+// // null
+// console.log(Number(null))       //op=0
 
-// "abc"
-console.log(Number("abc"))      //op=Nan
+// // "abc"
+// console.log(Number("abc"))      //op=Nan
 
-// [100]
-console.log(Number([100]))      //op=100
-// Print the outputs.
+// // [100]
+// console.log(Number([100]))      //op=100
+// // Print the outputs.
 
-// Task 4 – Boolean Constructor
-// Check whether below values are true or false using Boolean().
-// ""
-console.log(Boolean(""))            //op:false
+// // Task 4 – Boolean Constructor
+// // Check whether below values are true or false using Boolean().
+// // ""
+// console.log(Boolean(""))            //op:false
 
-// "javascript"
-console.log(Boolean("javascript"))      //op:true
+// // "javascript"
+// console.log(Boolean("javascript"))      //op:true
 
-// 0
-console.log(Boolean(0))         //op:false
+// // 0
+// console.log(Boolean(0))         //op:false
 
-// 1
-console.log(Boolean(1))         //op:true
+// // 1
+// console.log(Boolean(1))         //op:true
 
-// null
-console.log(Boolean(null))        //op:false
+// // null
+// console.log(Boolean(null))        //op:false
 
-// undefined
-console.log(Boolean(undefined))     //op:false
+// // undefined
+// console.log(Boolean(undefined))     //op:false
 
-// []
-console.log(Boolean([]))            //op:true
+// // []
+// console.log(Boolean([]))            //op:true
 
-// {}
-console.log(Boolean({}))            //op:true
+// // {}
+// console.log(Boolean({}))            //op:true
 
-// Task 5 – Student Pass or Fail
-// Take one variable:
-// let mark = 45
-// Condition:
-// Above 35 → Pass
-// Below 35 → Fail
-// Use if else.
-let mark=45;        //prompt()
-if(mark>35){
-    console.log("pass")
-}
-else{
-    console.log("fail")
-}
+// // Task 5 – Student Pass or Fail
+// // Take one variable:
+// // let mark = 45
+// // Condition:
+// // Above 35 → Pass
+// // Below 35 → Fail
+// // Use if else.
+// let mark=45;        //prompt()
+// if(mark>35){
+//     console.log("pass")
+// }
+// else{
+//     console.log("fail")
+// }
 
-// Task 6 – Voting Eligibility
-// Create a variable:
-// let age = 20
-// Conditions:
-// 18 and above → Eligible
-// Otherwise → Not Eligible
-let age=20;         //prompt()
-if(age>=18){
-    console.log("Eligible")
-}
-else{
-    console.log("not Eligible")
-}
+// // Task 6 – Voting Eligibility
+// // Create a variable:
+// // let age = 20
+// // Conditions:
+// // 18 and above → Eligible
+// // Otherwise → Not Eligible
+// let age=20;         //prompt()
+// if(age>=18){
+//     console.log("Eligible")
+// }
+// else{
+//     console.log("not Eligible")
+// }
 
-// Task 7 – Greatest Number
-// Find greatest among 3 numbers using if else if.
-// Example:
-let a = 50;
-let b = 80;
-let c = 30;
+// // Task 7 – Greatest Number
+// // Find greatest among 3 numbers using if else if.
+// // Example:
+// let a = 50;
+// let b = 80;
+// let c = 30;
 
-if(a>b && a>c){
-    console.log("A is greatest")
-}
-else if(b>a && b>c){
-    console.log("B is greatest")
-}
-else{
-    console.log("C is greatest")
-}
+// if(a>b && a>c){
+//     console.log("A is greatest")
+// }
+// else if(b>a && b>c){
+//     console.log("B is greatest")
+// }
+// else{
+//     console.log("C is greatest")
+// }
 
-// Task 8 – Traffic Light System
-// Using switch statement:
-// red → stop
-// yellow → ready
-// green → go
+// // Task 8 – Traffic Light System
+// // Using switch statement:
+// // red → stop
+// // yellow → ready
+// // green → go
 
-let Trafficlight="red"          //we can use prompt and alert too
+// let Trafficlight="red"          //we can use prompt and alert too
 
-switch (Trafficlight){
-    case "red": console.log("stop");
-    break;
+// switch (Trafficlight){
+//     case "red": console.log("stop");
+//     break;
     
-    case "yellow": console.log("ready");
-    break;
+//     case "yellow": console.log("ready");
+//     break;
 
-    case "green": console.log("go");
-    break;
+//     case "green": console.log("go");
+//     break;
 
-    default: console.log("have a nice day");
-    break;
+//     default: console.log("have a nice day");
+//     break;
+// }
+
+// // Task 9 – Login System
+// // Create variables:
+// // let username = "admin"
+// // let password = "1234"
+// // Conditions:
+// // Both correct → Login Success
+// // Otherwise → Invalid Login
+// // Use nested if.
+// let user="admin"        //prompt()
+// let pass= "1234"        //prompt()
+
+// if(user=="admin"){
+//     if(pass=="1234"){
+//         console.log("Login Success")
+//     }
+//     else{
+//         console.log("Invalid ")
+//     }
+// }
+// else{
+//     console.log("Invalid Login")
+// }
+
+// // Task 10 – Session Finder
+// // Take hour value:
+// // let hour = 14
+// // Conditions:
+// // 1–12 → Morning
+// // 13–15 → Afternoon
+// // 16–19 → Evening
+// // 20–24 → Night
+// // Use else if.
+
+// let hour=16       //prompt()
+
+// if(hour>=1 && hour<=12){
+//     console.log("Morning")
+// }
+// else if(hour>=13 && hour<=15){
+//     console.log("Afternoon")
+// }
+// else if(hour>=16 && hour<=19){
+//     console.log("Evening")
+// }
+// else if(hour>=20 && hour<=24){
+//     console.log("Night")
+// }
+// else{
+//     console.log("midnight")
+// }
+
+// // Bonus Challenge 🔥
+// // Predict outputs without running:
+// console.log(true + true)        //op:2
+
+// console.log("5" - 2)            //op:3
+
+// console.log("5" + 2)            //op:52
+
+// console.log(null + 1)           //op:1
+
+// console.log(undefined + 1)      //op:Nan
+
+// console.log(Boolean(" "))       //op:true
+
+// console.log(Number(true))       //op:1
+
+
+// Looping Statements
+// 1. Print Numbers
+// Print numbers from 1 to 20 using a for loop.
+
+for(let a=1; a<=20; a++){
+    console.log(a);
 }
 
-// Task 9 – Login System
-// Create variables:
-// let username = "admin"
-// let password = "1234"
-// Conditions:
-// Both correct → Login Success
-// Otherwise → Invalid Login
-// Use nested if.
-let user="admin"        //prompt()
-let pass= "1234"        //prompt()
+// 2. Odd Numbers
+// Print all odd numbers from 1 to 50.
 
-if(user=="admin"){
-    if(pass=="1234"){
-        console.log("Login Success")
+for(let i=1; i<=50; i++){
+    if(i%2==1){
+        console.log(i)
+    }
+}
+// 3. Multiplication Table
+// Print the multiplication table of 7.
+// Example:
+// 7 x 1 = 7
+// 7 x 2 = 14
+
+for(let i=1; i<=10; i++){
+    console.log("7 x "+i+" = "+(7*i))
+}
+
+// 4. Reverse Counting
+// Using while loop, print numbers from 20 to 1.
+
+let i=20
+while(i>0){
+    console.log(i);
+    i--
+}
+
+// 5. Sum of Numbers
+// Find the total sum of numbers from 1 to 100.
+let totalsum=0
+for (let i=1; i<=100; i++){
+    totalsum+=i
+}
+console.log(totalsum)
+// 6. Array Loop
+// Loop through this array and print all values.
+
+let fruits = ["apple","banana","orange","grapes"];
+for(let x in fruits){
+    console.log(fruits[x]);
+}
+
+// 7. Count Even Numbers
+// Count how many even numbers are present between 1 to 50.
+let count=0;
+for(let x=1; x<=50; x++){
+    if(x%2==0){
+        count++
+    }
+}
+console.log(count)
+// 8. Star Pattern
+// Print this pattern using loops:
+// *
+// **
+// ***
+// ****
+// *****
+for(let i=1; i<=5; i++){
+    let Star=""
+
+    for (let j=1; j<=i; j++){
+        Star+="*"
+    }
+    console.log(Star)
+}
+// Functions
+// 9. Simple Function
+// Create a function named welcome() that prints:
+// Welcome to JavaScript
+
+function first(){
+    console.log("Welcome to Javascript")
+}
+first()
+
+// 10. Function with Parameter
+// Create a function that accepts a name and prints:
+// Hello Naveen
+
+function  user(name) {
+    console.log("Hello", name)
+}
+user("srinivas")
+
+// 11. Add Two Numbers
+// Create a function that takes 2 numbers and returns the addition.
+// Example:
+// add(10,20)
+// Output:
+// 30
+function add(num1,num2){
+    return(num1+num2)
+}
+let sum=add(10,20)
+console.log(sum)
+
+// 12. Salary Bonus
+// Create a function that adds bonus to employee salary.
+// Example:
+// salary = 50000
+// bonus = 5000
+// Output:
+// 55000
+
+let emp1={
+    salary:50000
+}
+
+function total(bonus){
+    console.log(emp1.salary+bonus)
+}
+total(5000)
+
+// 13. Object Loop
+// Print all keys and values using for in.
+ let student = {
+     name : "Rahul",
+     course : "JavaScript",
+     marks : 95
+ }
+
+ for (let z in student){
+    console.log(z,":",student[z])
+ }
+
+// 14. Find Largest Number
+// Create a function to find the largest number between two values.
+// Example:
+// largest(10,50)
+// Output:
+// 50
+
+function largest(value1,value2){
+    if(value1>value2){
+        console.log(value1)
     }
     else{
-        console.log("Invalid ")
+        console.log(value2)
     }
 }
-else{
-    console.log("Invalid Login")
+largest(10,50)
+
+// 15. Mini Employee Task
+// Create an employee object and print:
+// Employee Name
+// Department
+// Salary
+// Salary after bonus
+// Using:
+// object
+// function
+// parameter
+// console.log()
+
+let Employee={
+    name:"Srinivas",
+    department:"IT",
+    salary:100000
 }
 
-// Task 10 – Session Finder
-// Take hour value:
-// let hour = 14
-// Conditions:
-// 1–12 → Morning
-// 13–15 → Afternoon
-// 16–19 → Evening
-// 20–24 → Night
-// Use else if.
-
-let hour=16       //prompt()
-
-if(hour>=1 && hour<=12){
-    console.log("Morning")
+function Data(bonus){
+    console.log(Employee.name);
+    console.log(Employee.department);
+    console.log(Employee.salary)
+    console.log(Employee.salary+bonus);
 }
-else if(hour>=13 && hour<=15){
-    console.log("Afternoon")
-}
-else if(hour>=16 && hour<=19){
-    console.log("Evening")
-}
-else if(hour>=20 && hour<=24){
-    console.log("Night")
-}
-else{
-    console.log("midnight")
-}
-
-// Bonus Challenge 🔥
-// Predict outputs without running:
-console.log(true + true)        //op:2
-
-console.log("5" - 2)            //op:3
-
-console.log("5" + 2)            //op:52
-
-console.log(null + 1)           //op:1
-
-console.log(undefined + 1)      //op:Nan
-
-console.log(Boolean(" "))       //op:true
-
-console.log(Number(true))       //op:1
+Data(20000)
