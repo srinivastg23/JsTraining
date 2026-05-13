@@ -391,175 +391,444 @@
 // 1. Print Numbers
 // Print numbers from 1 to 20 using a for loop.
 
-for(let a=1; a<=20; a++){
-    console.log(a);
-}
+// for(let a=1; a<=20; a++){
+//     console.log(a);
+// }
 
-// 2. Odd Numbers
-// Print all odd numbers from 1 to 50.
+// // 2. Odd Numbers
+// // Print all odd numbers from 1 to 50.
 
-for(let i=1; i<=50; i++){
-    if(i%2==1){
-        console.log(i)
-    }
-}
-// 3. Multiplication Table
-// Print the multiplication table of 7.
+// for(let i=1; i<=50; i++){
+//     if(i%2==1){
+//         console.log(i)
+//     }
+// }
+// // 3. Multiplication Table
+// // Print the multiplication table of 7.
+// // Example:
+// // 7 x 1 = 7
+// // 7 x 2 = 14
+
+// for(let i=1; i<=10; i++){
+//     console.log("7 x "+i+" = "+(7*i))
+// }
+
+// // 4. Reverse Counting
+// // Using while loop, print numbers from 20 to 1.
+
+// let i=20
+// while(i>0){
+//     console.log(i);
+//     i--
+// }
+
+// // 5. Sum of Numbers
+// // Find the total sum of numbers from 1 to 100.
+// let totalsum=0
+// for (let i=1; i<=100; i++){
+//     totalsum+=i
+// }
+// console.log(totalsum)
+// // 6. Array Loop
+// // Loop through this array and print all values.
+
+// let fruits = ["apple","banana","orange","grapes"];
+// for(let x in fruits){
+//     console.log(fruits[x]);
+// }
+
+// // 7. Count Even Numbers
+// // Count how many even numbers are present between 1 to 50.
+// let count=0;
+// for(let x=1; x<=50; x++){
+//     if(x%2==0){
+//         count++
+//     }
+// }
+// console.log(count)
+// // 8. Star Pattern
+// // Print this pattern using loops:
+// // *
+// // **
+// // ***
+// // ****
+// // *****
+// for(let i=1; i<=5; i++){
+//     let star=""
+
+//     for (let j=1; j<=i; j++){
+//         star+="*"
+//     }
+//     console.log(star)
+// }
+// // Functions
+// // 9. Simple Function
+// // Create a function named welcome() that prints:
+// // Welcome to JavaScript
+
+// function welcome(){
+//     console.log("Welcome to Javascript")
+// }
+// welcome()
+
+// // 10. Function with Parameter
+// // Create a function that accepts a name and prints:
+// // Hello Naveen
+
+// function  user(name) {
+//     console.log("Hello", name)
+// }
+// user("srinivas")
+
+// // 11. Add Two Numbers
+// // Create a function that takes 2 numbers and returns the addition.
+// // Example:
+// // add(10,20)
+// // Output:
+// // 30
+// function add(num1,num2){
+//     return(num1+num2)
+// }
+// let sum=add(10,20)
+// console.log(sum)
+
+// // 12. Salary Bonus
+// // Create a function that adds bonus to employee salary.
+// // Example:
+// // salary = 50000
+// // bonus = 5000
+// // Output:
+// // 55000
+
+// let emp1={
+//     salary:50000
+// }
+
+// function total(bonus){
+//     console.log(emp1.salary+bonus)
+// }
+// total(5000)
+
+// // 13. Object Loop
+// // Print all keys and values using for in.
+//  let student = {
+//      name : "Rahul",
+//      course : "JavaScript",
+//      marks : 95
+//  }
+
+//  for (let z in student){
+//     console.log(z,":",student[z])
+//  }
+
+// // 14. Find Largest Number
+// // Create a function to find the largest number between two values.
+// // Example:
+// // largest(10,50)
+// // Output:
+// // 50
+
+// function largest(value1,value2){
+//     if(value1>value2){
+//         console.log(value1)
+//     }
+//     else{
+//         console.log(value2)
+//     }
+// }
+// largest(10,50)
+
+// // 15. Mini Employee Task
+// // Create an employee object and print:
+// // Employee Name
+// // Department
+// // Salary
+// // Salary after bonus
+// // Using:
+// // object
+// // function
+// // parameter
+// // console.log()
+
+// let Employee={
+//     name:"Srinivas",
+//     department:"IT",
+//     salary:100000
+// }
+
+// function Data(bonus){
+//     console.log(Employee.name);
+//     console.log(Employee.department);
+//     console.log(Employee.salary)
+//     console.log(Employee.salary+bonus);
+// }
+// Data(20000)
+
+                                                    //Task-4
+// Task 1 — Basic Function
+// Create a function called welcomeUser.
+// Requirements:
+// Accept name
+// Print:
+// Welcome Naveen
 // Example:
-// 7 x 1 = 7
-// 7 x 2 = 14
+// welcomeUser("Naveen")
 
-for(let i=1; i<=10; i++){
-    console.log("7 x "+i+" = "+(7*i))
+function welcomeUser(name){
+    console.log("Welcome",name)
 }
+welcomeUser("Srinivas")
 
-// 4. Reverse Counting
-// Using while loop, print numbers from 20 to 1.
-
-let i=20
-while(i>0){
-    console.log(i);
-    i--
-}
-
-// 5. Sum of Numbers
-// Find the total sum of numbers from 1 to 100.
-let totalsum=0
-for (let i=1; i<=100; i++){
-    totalsum+=i
-}
-console.log(totalsum)
-// 6. Array Loop
-// Loop through this array and print all values.
-
-let fruits = ["apple","banana","orange","grapes"];
-for(let x in fruits){
-    console.log(fruits[x]);
-}
-
-// 7. Count Even Numbers
-// Count how many even numbers are present between 1 to 50.
-let count=0;
-for(let x=1; x<=50; x++){
-    if(x%2==0){
-        count++
-    }
-}
-console.log(count)
-// 8. Star Pattern
-// Print this pattern using loops:
-// *
-// **
-// ***
-// ****
-// *****
-for(let i=1; i<=5; i++){
-    let star=""
-
-    for (let j=1; j<=i; j++){
-        star+="*"
-    }
-    console.log(star)
-}
-// Functions
-// 9. Simple Function
-// Create a function named welcome() that prints:
-// Welcome to JavaScript
-
-function welcome(){
-    console.log("Welcome to Javascript")
-}
-welcome()
-
-// 10. Function with Parameter
-// Create a function that accepts a name and prints:
-// Hello Naveen
-
-function  user(name) {
-    console.log("Hello", name)
-}
-user("srinivas")
-
-// 11. Add Two Numbers
-// Create a function that takes 2 numbers and returns the addition.
+// Task 2 — Parameter + Return
+// Create a function squareNumber.
+// Requirements:
+// Accept one number
+// Return square value
 // Example:
-// add(10,20)
+// squareNumber(5)
 // Output:
-// 30
-function add(num1,num2){
-    return(num1+num2)
-}
-let sum=add(10,20)
-console.log(sum)
+// 25
 
-// 12. Salary Bonus
-// Create a function that adds bonus to employee salary.
-// Example:
-// salary = 50000
-// bonus = 5000
+function square(num){
+    return(num**2)
+}
+let squareRoot=square(5)
+console.log(squareRoot)
+
+// Task 3 — Object Function
+// Create an object:
+// {
+//    name : "Rahul",
+//    salary : 50000
+// }
+// Requirements:
+// Create a function:
+// employeeBonus(bonus)
 // Output:
+// Rahul
 // 55000
 
-let emp1={
+let Emp={
+    name:"saisrinivas",
     salary:50000
 }
 
-function total(bonus){
-    console.log(emp1.salary+bonus)
+function totalSalary(bonus){
+    console.log(Emp.name)
+    console.log(Emp.salary+bonus);
+    
 }
-total(5000)
+totalSalary(5000)
 
-// 13. Object Loop
-// Print all keys and values using for in.
- let student = {
-     name : "Rahul",
-     course : "JavaScript",
-     marks : 95
- }
+// Task 4 — Scope Checking
+// Inside a function:
+// Create var
+// Create let
+// Create const
+// Requirements:
+// Try accessing them outside block
+// Observe which works and which gives error
 
- for (let z in student){
-    console.log(z,":",student[z])
- }
+function scopeCheck(){
+    if(true){
+        var a="var is a global scope";
+        let b="let is block scope";
+        const c="const is also block scope"
+    }
+    console.log(a);         //true
+    //console.log(b);          //trie
+    //console.log(c);       //true
+}
+scopeCheck()
 
-// 14. Find Largest Number
-// Create a function to find the largest number between two values.
+// Task 5 — Arrow Function
+// Convert this into arrow function:
+// function add(a,b){
+//    console.log(a+b);
+// }
+
+var add=(a,b)=>{
+    console.log(a+b)
+}
+add(10,20)
+
+// Task 6 — Callback Function
+// Create:
+// multiply
+// calculator
+// Requirements:
+// calculator should accept:
+// callback function
+// two numbers
 // Example:
-// largest(10,50)
+// calculator(multiply,5,2)
 // Output:
-// 50
+// 10
 
-function largest(value1,value2){
-    if(value1>value2){
-        console.log(value1)
-    }
-    else{
-        console.log(value2)
+function calculator(callback,a,b){
+    callback(a,b)
+}
+function multiply(a,b){
+    console.log(a*b)
+}
+calculator(multiply,5,2)
+
+// Task 7 — Generator Function
+// Create generator function offers.
+// Requirements:
+// Yield:
+// "50% OFF"
+// "Free Delivery"
+// "Cashback"
+// Use:
+// next()
+// to print values one by one.
+
+function* generator(){
+    yield "50% OFF";
+    yield "Free Delivery";
+    yield "Cashback"
+}
+let offers=generator()
+
+console.log(offers.next().value)
+console.log(offers.next().value)
+console.log(offers.next().value)
+
+// Task 8 — Default Parameter
+// Create:
+// student(name,course="JavaScript")
+// Requirements:
+// If course not passed,
+// default should become "JavaScript".
+
+function student(name,course="javascript"){
+    console.log("name:"+name,"course:"+course)
+}
+student("srinivas","passed");
+student("Ram");
+student("sai","passed")
+
+// Task 9 — Currying
+// Create currying function for multiplication.
+// Example:
+// multi(2)(3)(4)
+// Output:
+// 24
+
+function multi(a){
+    return function(b){
+        return function(c){
+            console.log(a*b*c);
+        }
     }
 }
-largest(10,50)
+multi(2)(3)(4)
 
-// 15. Mini Employee Task
-// Create an employee object and print:
-// Employee Name
-// Department
-// Salary
-// Salary after bonus
-// Using:
-// object
+// Task 10 — Spread Operator
+// Merge these arrays:
+// [1,2,3]
+// [4,5,6]
+// Final Output:
+// [1,2,3,4,5,6]
+
+let arr1=[1,2,3];
+let arr2=[4,5,6];
+let totalArr=[...arr1,...arr2]
+
+console.log(totalArr)
+
+// Task 11 — Object Spread
+// Merge two objects:
+// {name:"Navi"}
+// {role:"Developer"}
+// Final Output:
+// {
+//   name:"Navi",
+//   role:"Developer"
+// }
+
+let person={
+    name:"Srinivas"
+}
+let jobRole={
+    role:'Developer'
+}
+
+let Details={...person,...jobRole}
+
+console.log(Details);
+
+// Task 12 — Rest Operator
+// Create function:
+// numbers(...num)
+// Requirements:
+// Print all numbers
+// Print total sum
+// Example:
+// numbers(1,2,3,4)
+// Output:
+// [1,2,3,4]
+// 10
+
+function numbers(...num){
+    console.log(num[0],num[1],num[2],num[3]);
+    console.log(num[0]+num[1]+num[2]+num[3])
+}
+numbers(1,2,3,4)
+
+// Mini Challenge 🔥
+// Create one small Student Management System using:
 // function
-// parameter
-// console.log()
+// callback
+// object
+// array
+// spread operator
+// rest operator
+// Features:
+// Add student
+// Print students
+// Calculate marks
 
-let Employee={
-    name:"Srinivas",
-    department:"IT",
-    salary:100000
+// Add bonus marks
+
+let school={
+    name:"stackly",
+    class:10,
+    section:2
+}
+let school2={
+    name1:"code",
+    class1:9,
+    section1:2
 }
 
-function Data(bonus){
-    console.log(Employee.name);
-    console.log(Employee.department);
-    console.log(Employee.salary)
-    console.log(Employee.salary+bonus);
+let totalschool={...school,...school2,"start date": "10th may 26"}      //add start date(obj spread)
+console.log(totalschool)
+
+let sec1=["ram","sam","sai"];
+let sec2=["sree","mouni","renu"]
+
+let totalsec=[...sec1,...sec2,"srinivas","sekhar"]          //add student, spread opeartor
+console.log(totalsec)
+
+function newstudents(...student){
+    console.log(student[0],student[1],student[2],student[3])
 }
-Data(20000)
+newstudents("vamsi","rohith","anji","krishna")    //print students,rest parameter
+
+function totalMarks(add,sub1,sub2,sub3){            //callback function,calculate marks
+    add(sub1,sub2,sub3)
+}
+
+function marks(sub1,sub2,sub3){
+    console.log(sub1+sub2+sub3)
+}
+totalMarks(marks,100,250,175)
+
+let total=525                               //bonus marks adding
+
+function bonusMarks(bonus){
+    console.log(total+bonus)
+}
+bonusMarks(75)
