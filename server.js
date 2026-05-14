@@ -574,261 +574,508 @@
 // Example:
 // welcomeUser("Naveen")
 
-function welcomeUser(name){
-    console.log("Welcome",name)
-}
-welcomeUser("Srinivas")
-
-// Task 2 — Parameter + Return
-// Create a function squareNumber.
-// Requirements:
-// Accept one number
-// Return square value
-// Example:
-// squareNumber(5)
-// Output:
-// 25
-
-function square(num){
-    return(num**2)
-}
-let squareRoot=square(5)
-console.log(squareRoot)
-
-// Task 3 — Object Function
-// Create an object:
-// {
-//    name : "Rahul",
-//    salary : 50000
+// function welcomeUser(name){
+//     console.log("Welcome",name)
 // }
-// Requirements:
-// Create a function:
-// employeeBonus(bonus)
-// Output:
-// Rahul
-// 55000
+// welcomeUser("Srinivas")
 
-let Emp={
-    name:"saisrinivas",
-    salary:50000
-}
+// // Task 2 — Parameter + Return
+// // Create a function squareNumber.
+// // Requirements:
+// // Accept one number
+// // Return square value
+// // Example:
+// // squareNumber(5)
+// // Output:
+// // 25
 
-function totalSalary(bonus){
-    console.log(Emp.name)
-    console.log(Emp.salary+bonus);
+// function square(num){
+//     return(num**2)
+// }
+// let squareRoot=square(5)
+// console.log(squareRoot)
+
+// // Task 3 — Object Function
+// // Create an object:
+// // {
+// //    name : "Rahul",
+// //    salary : 50000
+// // }
+// // Requirements:
+// // Create a function:
+// // employeeBonus(bonus)
+// // Output:
+// // Rahul
+// // 55000
+
+// let Emp={
+//     name:"saisrinivas",
+//     salary:50000
+// }
+
+// function totalSalary(bonus){
+//     console.log(Emp.name)
+//     console.log(Emp.salary+bonus);
     
-}
-totalSalary(5000)
-
-// Task 4 — Scope Checking
-// Inside a function:
-// Create var
-// Create let
-// Create const
-// Requirements:
-// Try accessing them outside block
-// Observe which works and which gives error
-
-function scopeCheck(){
-    if(true){
-        var a="var is a global scope";
-        let b="let is block scope";
-        const c="const is also block scope"
-    }
-    console.log(a);         //true
-    //console.log(b);          //trie
-    //console.log(c);       //true
-}
-scopeCheck()
-
-// Task 5 — Arrow Function
-// Convert this into arrow function:
-// function add(a,b){
-//    console.log(a+b);
 // }
+// totalSalary(5000)
 
-var add=(a,b)=>{
-    console.log(a+b)
-}
-add(10,20)
+// // Task 4 — Scope Checking
+// // Inside a function:
+// // Create var
+// // Create let
+// // Create const
+// // Requirements:
+// // Try accessing them outside block
+// // Observe which works and which gives error
 
-// Task 6 — Callback Function
-// Create:
-// multiply
-// calculator
-// Requirements:
-// calculator should accept:
-// callback function
-// two numbers
-// Example:
+// function scopeCheck(){
+//     if(true){
+//         var a="var is a global scope";
+//         let b="let is block scope";
+//         const c="const is also block scope"
+//     }
+//     console.log(a);         //true
+//     //console.log(b);          //trie
+//     //console.log(c);       //true
+// }
+// scopeCheck()
+
+// // Task 5 — Arrow Function
+// // Convert this into arrow function:
+// // function add(a,b){
+// //    console.log(a+b);
+// // }
+
+// var add=(a,b)=>{
+//     console.log(a+b)
+// }
+// add(10,20)
+
+// // Task 6 — Callback Function
+// // Create:
+// // multiply
+// // calculator
+// // Requirements:
+// // calculator should accept:
+// // callback function
+// // two numbers
+// // Example:
+// // calculator(multiply,5,2)
+// // Output:
+// // 10
+
+// function calculator(callback,a,b){
+//     callback(a,b)
+// }
+// function multiply(a,b){
+//     console.log(a*b)
+// }
 // calculator(multiply,5,2)
-// Output:
-// 10
 
-function calculator(callback,a,b){
-    callback(a,b)
-}
-function multiply(a,b){
-    console.log(a*b)
-}
-calculator(multiply,5,2)
+// // Task 7 — Generator Function
+// // Create generator function offers.
+// // Requirements:
+// // Yield:
+// // "50% OFF"
+// // "Free Delivery"
+// // "Cashback"
+// // Use:
+// // next()
+// // to print values one by one.
 
-// Task 7 — Generator Function
-// Create generator function offers.
-// Requirements:
-// Yield:
-// "50% OFF"
-// "Free Delivery"
-// "Cashback"
-// Use:
-// next()
-// to print values one by one.
+// function* generator(){
+//     yield "50% OFF";
+//     yield "Free Delivery";
+//     yield "Cashback"
+// }
+// let offers=generator()
 
-function* generator(){
-    yield "50% OFF";
-    yield "Free Delivery";
-    yield "Cashback"
-}
-let offers=generator()
+// console.log(offers.next().value)
+// console.log(offers.next().value)
+// console.log(offers.next().value)
 
-console.log(offers.next().value)
-console.log(offers.next().value)
-console.log(offers.next().value)
+// // Task 8 — Default Parameter
+// // Create:
+// // student(name,course="JavaScript")
+// // Requirements:
+// // If course not passed,
+// // default should become "JavaScript".
 
-// Task 8 — Default Parameter
-// Create:
-// student(name,course="JavaScript")
-// Requirements:
-// If course not passed,
-// default should become "JavaScript".
+// function student(name,course="javascript"){
+//     console.log("name:"+name,"course:"+course)
+// }
+// student("srinivas","passed");
+// student("Ram");
+// student("sai","passed")
 
-function student(name,course="javascript"){
-    console.log("name:"+name,"course:"+course)
-}
-student("srinivas","passed");
-student("Ram");
-student("sai","passed")
+// // Task 9 — Currying
+// // Create currying function for multiplication.
+// // Example:
+// // multi(2)(3)(4)
+// // Output:
+// // 24
 
-// Task 9 — Currying
-// Create currying function for multiplication.
-// Example:
+// function multi(a){
+//     return function(b){
+//         return function(c){
+//             console.log(a*b*c);
+//         }
+//     }
+// }
 // multi(2)(3)(4)
-// Output:
-// 24
 
-function multi(a){
-    return function(b){
-        return function(c){
-            console.log(a*b*c);
-        }
-    }
-}
-multi(2)(3)(4)
+// // Task 10 — Spread Operator
+// // Merge these arrays:
+// // [1,2,3]
+// // [4,5,6]
+// // Final Output:
+// // [1,2,3,4,5,6]
 
-// Task 10 — Spread Operator
-// Merge these arrays:
-// [1,2,3]
-// [4,5,6]
-// Final Output:
-// [1,2,3,4,5,6]
+// let arr1=[1,2,3];
+// let arr2=[4,5,6];
+// let totalArr=[...arr1,...arr2]
 
-let arr1=[1,2,3];
-let arr2=[4,5,6];
-let totalArr=[...arr1,...arr2]
+// console.log(totalArr)
 
-console.log(totalArr)
+// // Task 11 — Object Spread
+// // Merge two objects:
+// // {name:"Navi"}
+// // {role:"Developer"}
+// // Final Output:
+// // {
+// //   name:"Navi",
+// //   role:"Developer"
+// // }
 
-// Task 11 — Object Spread
-// Merge two objects:
-// {name:"Navi"}
-// {role:"Developer"}
-// Final Output:
-// {
-//   name:"Navi",
-//   role:"Developer"
+// let person={
+//     name:"Srinivas"
+// }
+// let jobRole={
+//     role:'Developer'
 // }
 
-let person={
-    name:"Srinivas"
-}
-let jobRole={
-    role:'Developer'
-}
+// let Details={...person,...jobRole}
 
-let Details={...person,...jobRole}
+// console.log(Details);
 
-console.log(Details);
+// // Task 12 — Rest Operator
+// // Create function:
+// // numbers(...num)
+// // Requirements:
+// // Print all numbers
+// // Print total sum
+// // Example:
+// // numbers(1,2,3,4)
+// // Output:
+// // [1,2,3,4]
+// // 10
 
-// Task 12 — Rest Operator
-// Create function:
-// numbers(...num)
-// Requirements:
-// Print all numbers
-// Print total sum
-// Example:
+// function numbers(...num){
+//     console.log(num[0],num[1],num[2],num[3]);
+//     console.log(num[0]+num[1]+num[2]+num[3])
+// }
 // numbers(1,2,3,4)
+
+// // Mini Challenge 🔥
+// // Create one small Student Management System using:
+// // function
+// // callback
+// // object
+// // array
+// // spread operator
+// // rest operator
+// // Features:
+// // Add student
+// // Print students
+// // Calculate marks
+
+// // Add bonus marks
+
+// let school={
+//     name:"stackly",
+//     class:10,
+//     section:2
+// }
+// let school2={
+//     name1:"code",
+//     class1:9,
+//     section1:2
+// }
+
+// let totalschool={...school,...school2,"start date": "10th may 26"}      //add start date(obj spread)
+// console.log(totalschool)
+
+// let sec1=["ram","sam","sai"];
+// let sec2=["sree","mouni","renu"]
+
+// let totalsec=[...sec1,...sec2,"srinivas","sekhar"]          //add student, spread opeartor
+// console.log(totalsec)
+
+// function newstudents(...student){
+//     console.log(student[0],student[1],student[2],student[3])
+// }
+// newstudents("vamsi","rohith","anji","krishna")    //print students,rest parameter
+
+// function totalMarks(add,sub1,sub2,sub3){            //callback function,calculate marks
+//     add(sub1,sub2,sub3)
+// }
+
+// function marks(sub1,sub2,sub3){
+//     console.log(sub1+sub2+sub3)
+// }
+// totalMarks(marks,100,250,175)
+
+// let total=525                               //bonus marks adding
+
+// function bonusMarks(bonus){
+//     console.log(total+bonus)
+// }
+// bonusMarks(75)
+
+                                            //Task-5
+// Task 1 — Student Registration Form
+// Create a program using:
+// prompt()
+// variables (let, const)
+// console.log()
+// Requirements:
+// Ask student name
+// Ask department
+// Ask age
+// Print all details using template string
+// Example Output:
+// Welcome Naveen
+// Department: CSE
+// Age: 20
+
+function form(){
+    let name=prompt("name");
+    let department=prompt("dep");
+    const age=prompt("age")
+
+    console.log("Welcome",name);
+    console.log("Department:",department);
+    console.log("age:",age);
+}
+//form()
+
+// Task 2 — ATM Withdrawal System
+// Use:
+// if else
+// comparison operators
+// logical operators
+// Requirements:
+// User balance = 10000
+// Ask withdrawal amount
+// If amount <= balance → "Transaction Successful"
+// Else
+// → "Insufficient Balance"
+// Bonus:
+// Minimum withdrawal = 100
+
+let balance=10000
+
+function withdrawl(amount){
+    if(amount >= 100 && amount <= balance){
+        console.log("Transaction successful")
+    }
+    else{
+        console.log("Insufficient balance")
+    }
+}
+withdrawl(9000)
+
+// Task 3 — Swiggy Discount Checker
+// Use:
+// ternary operator
+// Requirements:
+// If order amount > 499
+// Show:
+// "Free Delivery Available"
+// Else:
+// "Delivery Charges Applied"
+
+let orderAmount=500;
+
+orderAmount>499 ? console.log("Free Delivery"):console.log("Delivery Charges Applied");
+
+
+// Task 4 — Instagram Login System
+// Use:
+// nested if
+// Requirements:
+// Correct username = "admin"
+// Correct password = "1234"
+// Conditions:
+// If username correct → ask password
+// If password correct → Login Success
+// Else → Wrong Password
+// Else → Invalid Username
+
+let username="admin";
+let password="1234";
+
+if(username == "admin"){
+    let pass= "1234" //prompt("password")
+    console.log(pass);
+
+    if (pass == password){
+        console.log("Login success")
+    }
+    else{
+        console.log("wrong password");
+        
+    }
+}
+else{
+    console.log("Invalid username");
+}
+
+// Task 5 — Traffic Signal System
+// Use:
+// switch statement
+// Requirements:
+// Input:
+// red / yellow / green
 // Output:
-// [1,2,3,4]
-// 10
+// STOP
+// READY
+// GO
 
-function numbers(...num){
-    console.log(num[0],num[1],num[2],num[3]);
-    console.log(num[0]+num[1]+num[2]+num[3])
+let Trafficsystem="red";
+
+switch(Trafficsystem){
+    case "red": console.log("STOP");
+    break;
+
+    case "yellow": console.log("READY");
+    break;
+
+    case "green": console.log("GO")
+    break;
+
+    default: console.log("Good ride");
+    break;
 }
-numbers(1,2,3,4)
 
-// Mini Challenge 🔥
-// Create one small Student Management System using:
+// Task 6 — Employee Salary Calculator
+// Use:
 // function
-// callback
-// object
-// array
-// spread operator
-// rest operator
-// Features:
-// Add student
-// Print students
-// Calculate marks
+// parameters
+// return
+// Requirements:
+// Create function salaryCalculation
+// Basic salary + bonus
+// Return total salary
+// Example:
+// salaryCalculation(25000,5000)
+// Output:
+// 30000
 
-// Add bonus marks
-
-let school={
-    name:"stackly",
-    class:10,
-    section:2
-}
-let school2={
-    name1:"code",
-    class1:9,
-    section1:2
+let emp={
+    name:"srinivas",
+    salary:25000
 }
 
-let totalschool={...school,...school2,"start date": "10th may 26"}      //add start date(obj spread)
-console.log(totalschool)
-
-let sec1=["ram","sam","sai"];
-let sec2=["sree","mouni","renu"]
-
-let totalsec=[...sec1,...sec2,"srinivas","sekhar"]          //add student, spread opeartor
-console.log(totalsec)
-
-function newstudents(...student){
-    console.log(student[0],student[1],student[2],student[3])
+function salaryCalculation(bonus){
+    return (emp.salary+bonus)
 }
-newstudents("vamsi","rohith","anji","krishna")    //print students,rest parameter
+let totalSalary=salaryCalculation(5000)
+console.log(totalSalary);
 
-function totalMarks(add,sub1,sub2,sub3){            //callback function,calculate marks
-    add(sub1,sub2,sub3)
+// Task 7 — E-Commerce Cart Total
+// Use:
+// Array
+// for loop
+// Requirements:
+// Store product prices inside array:
+// [100,200,300,400]
+// Find:
+// Total price
+// Average price
+
+let storeProducts=[100,200,300,400]
+let totalPrice=0
+let avgPrice=0
+let countofProdcuts=0
+
+for (let x in storeProducts){
+    countofProdcuts++
+    totalPrice+=storeProducts[x]
+    avgPrice=totalPrice/countofProdcuts
+}
+console.log(totalPrice)
+console.log(avgPrice);
+
+// Task 8 — WhatsApp Contact Book
+// Use:
+// Object
+// for in loop
+// Requirements:
+// Store:
+// name
+// phone
+// status
+// Print all details dynamically
+
+let Store=[{
+    name:"srinivas",
+    phone:999999999,
+    status:"online",
+},{
+    name2:"meera",
+    phone2:999888889,
+    status2:"offline",
+},{
+    name3:"Ram",
+    phone3:6767677788,
+    status3:"online",
+}]
+
+for (let i in Store){
+    console.log(i,":",Store[i])
 }
 
-function marks(sub1,sub2,sub3){
-    console.log(sub1+sub2+sub3)
-}
-totalMarks(marks,100,250,175)
+// Task 9 — Movie Ticket Booking
+// Use:
+// function
+// callback function
+// Requirements:
+// Create:
+// bookTicket()
+// payment()
+// After booking complete,
+// callback payment function automatically.
 
-let total=525                               //bonus marks adding
-
-function bonusMarks(bonus){
-    console.log(total+bonus)
+function BoookTicket(Book){
+    console.log("Payment is loading");
+    Book()
 }
-bonusMarks(75)
+function Payment(){
+    console.log("Booking is completed ");
+}
+BoookTicket(Payment)
+
+// Task 10 — Food Delivery Time Tracker
+// Use:
+// Generator Function
+// Requirements:
+// Show order stages one by one:
+// Order Confirmed
+// Preparing Food
+// Out for Delivery
+// Delivered
+
+function* FoodDelivery(){
+    yield "Order Confirmed";
+    yield "Preparing Food";
+    yield "Out for delievery";
+    yield "Delievered"
+}
+let Tracking=FoodDelivery()
+
+console.log(Tracking.next().value);
+console.log(Tracking.next().value);
+console.log(Tracking.next().value);
+console.log(Tracking.next().value);
