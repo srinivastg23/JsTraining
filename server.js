@@ -833,249 +833,340 @@
 // }
 // bonusMarks(75)
 
-                                            //Task-5
-// Task 1 — Student Registration Form
-// Create a program using:
-// prompt()
-// variables (let, const)
-// console.log()
-// Requirements:
-// Ask student name
-// Ask department
-// Ask age
-// Print all details using template string
-// Example Output:
-// Welcome Naveen
-// Department: CSE
-// Age: 20
+//                                             //Task-5
+// // Task 1 — Student Registration Form
+// // Create a program using:
+// // prompt()
+// // variables (let, const)
+// // console.log()
+// // Requirements:
+// // Ask student name
+// // Ask department
+// // Ask age
+// // Print all details using template string
+// // Example Output:
+// // Welcome Naveen
+// // Department: CSE
+// // Age: 20
 
-function form(){
-    let name=prompt("name");
-    let department=prompt("dep");
-    const age=prompt("age")
+// function form(){
+//     let name=prompt("name");
+//     let department=prompt("dep");
+//     const age=prompt("age")
 
-    console.log("Welcome",name);
-    console.log("Department:",department);
-    console.log("age:",age);
-}
-//form()
+//     console.log("Welcome",name);
+//     console.log("Department:",department);
+//     console.log("age:",age);
+// }
+// //form()
 
-// Task 2 — ATM Withdrawal System
-// Use:
-// if else
-// comparison operators
-// logical operators
-// Requirements:
-// User balance = 10000
-// Ask withdrawal amount
-// If amount <= balance → "Transaction Successful"
-// Else
-// → "Insufficient Balance"
-// Bonus:
-// Minimum withdrawal = 100
+// // Task 2 — ATM Withdrawal System
+// // Use:
+// // if else
+// // comparison operators
+// // logical operators
+// // Requirements:
+// // User balance = 10000
+// // Ask withdrawal amount
+// // If amount <= balance → "Transaction Successful"
+// // Else
+// // → "Insufficient Balance"
+// // Bonus:
+// // Minimum withdrawal = 100
 
-let balance=10000
+// let balance=10000
 
-function withdrawl(amount){
-    if(amount >= 100 && amount <= balance){
-        console.log("Transaction successful")
-    }
-    else{
-        console.log("Insufficient balance")
-    }
-}
-withdrawl(9000)
+// function withdrawl(amount){
+//     if(amount >= 100 && amount <= balance){
+//         console.log("Transaction successful")
+//     }
+//     else{
+//         console.log("Insufficient balance")
+//     }
+// }
+// withdrawl(9000)
 
-// Task 3 — Swiggy Discount Checker
-// Use:
-// ternary operator
-// Requirements:
-// If order amount > 499
-// Show:
-// "Free Delivery Available"
-// Else:
-// "Delivery Charges Applied"
+// // Task 3 — Swiggy Discount Checker
+// // Use:
+// // ternary operator
+// // Requirements:
+// // If order amount > 499
+// // Show:
+// // "Free Delivery Available"
+// // Else:
+// // "Delivery Charges Applied"
 
-let orderAmount=500;
+// let orderAmount=500;
 
-orderAmount>499 ? console.log("Free Delivery"):console.log("Delivery Charges Applied");
+// orderAmount>499 ? console.log("Free Delivery"):console.log("Delivery Charges Applied");
 
 
-// Task 4 — Instagram Login System
-// Use:
-// nested if
-// Requirements:
-// Correct username = "admin"
-// Correct password = "1234"
-// Conditions:
-// If username correct → ask password
-// If password correct → Login Success
-// Else → Wrong Password
-// Else → Invalid Username
+// // Task 4 — Instagram Login System
+// // Use:
+// // nested if
+// // Requirements:
+// // Correct username = "admin"
+// // Correct password = "1234"
+// // Conditions:
+// // If username correct → ask password
+// // If password correct → Login Success
+// // Else → Wrong Password
+// // Else → Invalid Username
 
-let username="admin";
-let password="1234";
+// let username="admin";
+// let password="1234";
 
-if(username == "admin"){
-    let pass= "1234" //prompt("password")
-    console.log(pass);
+// if(username == "admin"){
+//     let pass= "1234" //prompt("password")
+//     console.log(pass);
 
-    if (pass == password){
-        console.log("Login success")
-    }
-    else{
-        console.log("wrong password");
+//     if (pass == password){
+//         console.log("Login success")
+//     }
+//     else{
+//         console.log("wrong password");
         
-    }
+//     }
+// }
+// else{
+//     console.log("Invalid username");
+// }
+
+// // Task 5 — Traffic Signal System
+// // Use:
+// // switch statement
+// // Requirements:
+// // Input:
+// // red / yellow / green
+// // Output:
+// // STOP
+// // READY
+// // GO
+
+// let Trafficsystem="red";
+
+// switch(Trafficsystem){
+//     case "red": console.log("STOP");
+//     break;
+
+//     case "yellow": console.log("READY");
+//     break;
+
+//     case "green": console.log("GO")
+//     break;
+
+//     default: console.log("Good ride");
+//     break;
+// }
+
+// // Task 6 — Employee Salary Calculator
+// // Use:
+// // function
+// // parameters
+// // return
+// // Requirements:
+// // Create function salaryCalculation
+// // Basic salary + bonus
+// // Return total salary
+// // Example:
+// // salaryCalculation(25000,5000)
+// // Output:
+// // 30000
+
+// let emp={
+//     name:"srinivas",
+//     salary:25000
+// }
+
+// function salaryCalculation(bonus){
+//     return (emp.salary+bonus)
+// }
+// let totalSalary=salaryCalculation(5000)
+// console.log(totalSalary);
+
+// // Task 7 — E-Commerce Cart Total
+// // Use:
+// // Array
+// // for loop
+// // Requirements:
+// // Store product prices inside array:
+// // [100,200,300,400]
+// // Find:
+// // Total price
+// // Average price
+
+// let storeProducts=[100,200,300,400]
+// let totalPrice=0
+// let avgPrice=0
+// let countofProdcuts=0
+
+// for (let x in storeProducts){
+//     countofProdcuts++
+//     totalPrice+=storeProducts[x]
+//     avgPrice=totalPrice/countofProdcuts
+// }
+// console.log(totalPrice)
+// console.log(avgPrice);
+
+// // Task 8 — WhatsApp Contact Book
+// // Use:
+// // Object
+// // for in loop
+// // Requirements:
+// // Store:
+// // name
+// // phone
+// // status
+// // Print all details dynamically
+
+// let Store=[{
+//     name:"srinivas",
+//     phone:999999999,
+//     status:"online",
+// },{
+//     name2:"meera",
+//     phone2:999888889,
+//     status2:"offline",
+// },{
+//     name3:"Ram",
+//     phone3:6767677788,
+//     status3:"online",
+// }]
+
+// for (let i in Store){
+//     console.log(i,":",Store[i])
+// }
+
+// // Task 9 — Movie Ticket Booking
+// // Use:
+// // function
+// // callback function
+// // Requirements:
+// // Create:
+// // bookTicket()
+// // payment()
+// // After booking complete,
+// // callback payment function automatically.
+
+// function BoookTicket(Book){
+//     console.log("Payment is loading");
+//     Book()
+// }
+// function Payment(){
+//     console.log("Booking is completed ");
+// }
+// BoookTicket(Payment)
+
+// // Task 10 — Food Delivery Time Tracker
+// // Use:
+// // Generator Function
+// // Requirements:
+// // Show order stages one by one:
+// // Order Confirmed
+// // Preparing Food
+// // Out for Delivery
+// // Delivered
+
+// function* FoodDelivery(){
+//     yield "Order Confirmed";
+//     yield "Preparing Food";
+//     yield "Out for delievery";
+//     yield "Delievered"
+// }
+// let Tracking=FoodDelivery()
+
+// console.log(Tracking.next().value);
+// console.log(Tracking.next().value);
+// console.log(Tracking.next().value);
+// console.log(Tracking.next().value);
+
+
+// ==========================================
+// 5 Real-Time JavaScript Questions
+// Topic : Array + Object + HOF + Spread
+// ==========================================
+
+// 1. Student Attendance System
+// Create two arrays:
+// presentStudents
+// absentStudents
+// Merge both arrays using spread operator
+// Add one new student at last
+// Print final array
+
+let presentStudents = ["srinivas","ram","sam"];
+let absentStudents = ["madhu","rahul","geetha"];
+
+let toatlStudents=[...presentStudents,...absentStudents,"saketh","vinay"]
+
+console.log(toatlStudents);
+
+// 2. E-Commerce Cart
+// Create object for mobile details
+// Create another object for charger details
+// Merge both objects using spread operator
+// Add deliveryDate property
+// Print final object
+
+let mobileDetails={
+    brand:"apple",
+    model:"18 pro",
+    price:100000
 }
-else{
-    console.log("Invalid username");
+
+let chargerDetails={
+    cprice:2000,
+    type:"c"
 }
 
-// Task 5 — Traffic Signal System
-// Use:
-// switch statement
-// Requirements:
-// Input:
-// red / yellow / green
-// Output:
-// STOP
-// READY
-// GO
+let finalObject={...mobileDetails,...chargerDetails,"Deliverydate":"15/05/2026"}
 
-let Trafficsystem="red";
+console.log(finalObject)
 
-switch(Trafficsystem){
-    case "red": console.log("STOP");
-    break;
+// 3. Food Delivery App
+// Create function named orderFood()
+// Accept multiple food items using rest operator
+// Print:
+// Total items ordered
+// First item
+// Last item
 
-    case "yellow": console.log("READY");
-    break;
+let count=0;
 
-    case "green": console.log("GO")
-    break;
-
-    default: console.log("Good ride");
-    break;
+function orderFood(...food){
+    console.log(food.length);
+    console.log(food[0]);
+    console.log(food[food.length-1]);   
 }
+orderFood("idly","dosa","sambar rice","curd rice","veg meals","biryani")
 
-// Task 6 — Employee Salary Calculator
-// Use:
-// function
-// parameters
-// return
-// Requirements:
-// Create function salaryCalculation
-// Basic salary + bonus
-// Return total salary
-// Example:
-// salaryCalculation(25000,5000)
-// Output:
-// 30000
+// 4. Employee Salary Filter
+// Create array of employee objects
+// Filter employees whose salary is above 50000
+// Print filtered employees
 
-let emp={
-    name:"srinivas",
-    salary:25000
-}
+let emp=[
+    {emp1:"srinu", salary:60000},
+    {emp2:"ram", salary:49000},
+    {emp3:"sam", salary:70000},
+    {emp4:"meera", salary:50000}
+]
 
-function salaryCalculation(bonus){
-    return (emp.salary+bonus)
-}
-let totalSalary=salaryCalculation(5000)
-console.log(totalSalary);
+let filiteredEmp=emp.filter((c,i,t)=>{
+    return c.salary >50000;
+})
+console.log(filiteredEmp);
 
-// Task 7 — E-Commerce Cart Total
-// Use:
-// Array
-// for loop
-// Requirements:
-// Store product prices inside array:
-// [100,200,300,400]
-// Find:
-// Total price
-// Average price
+// 5. Online Game Score Board
+// Create array of scores
+// Use reduce()
+// Find total score of all players
+// Print final total
 
-let storeProducts=[100,200,300,400]
-let totalPrice=0
-let avgPrice=0
-let countofProdcuts=0
+let gameScores=[90,85,89,76,54]
 
-for (let x in storeProducts){
-    countofProdcuts++
-    totalPrice+=storeProducts[x]
-    avgPrice=totalPrice/countofProdcuts
-}
-console.log(totalPrice)
-console.log(avgPrice);
+let finalScore=gameScores.reduce((acc,c,i,t)=>{
+    return acc+c;
+})
 
-// Task 8 — WhatsApp Contact Book
-// Use:
-// Object
-// for in loop
-// Requirements:
-// Store:
-// name
-// phone
-// status
-// Print all details dynamically
-
-let Store=[{
-    name:"srinivas",
-    phone:999999999,
-    status:"online",
-},{
-    name2:"meera",
-    phone2:999888889,
-    status2:"offline",
-},{
-    name3:"Ram",
-    phone3:6767677788,
-    status3:"online",
-}]
-
-for (let i in Store){
-    console.log(i,":",Store[i])
-}
-
-// Task 9 — Movie Ticket Booking
-// Use:
-// function
-// callback function
-// Requirements:
-// Create:
-// bookTicket()
-// payment()
-// After booking complete,
-// callback payment function automatically.
-
-function BoookTicket(Book){
-    console.log("Payment is loading");
-    Book()
-}
-function Payment(){
-    console.log("Booking is completed ");
-}
-BoookTicket(Payment)
-
-// Task 10 — Food Delivery Time Tracker
-// Use:
-// Generator Function
-// Requirements:
-// Show order stages one by one:
-// Order Confirmed
-// Preparing Food
-// Out for Delivery
-// Delivered
-
-function* FoodDelivery(){
-    yield "Order Confirmed";
-    yield "Preparing Food";
-    yield "Out for delievery";
-    yield "Delievered"
-}
-let Tracking=FoodDelivery()
-
-console.log(Tracking.next().value);
-console.log(Tracking.next().value);
-console.log(Tracking.next().value);
-console.log(Tracking.next().value);
+console.log(finalScore);
