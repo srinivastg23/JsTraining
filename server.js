@@ -1131,8 +1131,6 @@ console.log(finalObject)
 // First item
 // Last item
 
-let count=0;
-
 function orderFood(...food){
     console.log(food.length);
     console.log(food[0]);
