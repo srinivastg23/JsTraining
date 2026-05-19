@@ -1081,90 +1081,207 @@
 // console.log(Tracking.next().value);
 
 
-// ==========================================
-// 5 Real-Time JavaScript Questions
-// Topic : Array + Object + HOF + Spread
-// ==========================================
+// // ==========================================
+// // 5 Real-Time JavaScript Questions
+// // Topic : Array + Object + HOF + Spread
+// // ==========================================
 
-// 1. Student Attendance System
-// Create two arrays:
-// presentStudents
-// absentStudents
-// Merge both arrays using spread operator
-// Add one new student at last
-// Print final array
+// // 1. Student Attendance System
+// // Create two arrays:
+// // presentStudents
+// // absentStudents
+// // Merge both arrays using spread operator
+// // Add one new student at last
+// // Print final array
 
-let presentStudents = ["srinivas","ram","sam"];
-let absentStudents = ["madhu","rahul","geetha"];
+// let presentStudents = ["srinivas","ram","sam"];
+// let absentStudents = ["madhu","rahul","geetha"];
 
-let toatlStudents=[...presentStudents,...absentStudents,"saketh","vinay"]
+// let toatlStudents=[...presentStudents,...absentStudents,"saketh","vinay"]
 
-console.log(toatlStudents);
+// console.log(toatlStudents);
 
-// 2. E-Commerce Cart
-// Create object for mobile details
-// Create another object for charger details
-// Merge both objects using spread operator
-// Add deliveryDate property
-// Print final object
+// // 2. E-Commerce Cart
+// // Create object for mobile details
+// // Create another object for charger details
+// // Merge both objects using spread operator
+// // Add deliveryDate property
+// // Print final object
 
-let mobileDetails={
-    brand:"apple",
-    model:"18 pro",
-    price:100000
-}
+// let mobileDetails={
+//     brand:"apple",
+//     model:"18 pro",
+//     price:100000
+// }
 
-let chargerDetails={
-    cprice:2000,
-    type:"c"
-}
+// let chargerDetails={
+//     cprice:2000,
+//     type:"c"
+// }
 
-let finalObject={...mobileDetails,...chargerDetails,"Deliverydate":"15/05/2026"}
+// let finalObject={...mobileDetails,...chargerDetails,"Deliverydate":"15/05/2026"}
 
-console.log(finalObject)
+// console.log(finalObject)
 
-// 3. Food Delivery App
-// Create function named orderFood()
-// Accept multiple food items using rest operator
+// // 3. Food Delivery App
+// // Create function named orderFood()
+// // Accept multiple food items using rest operator
+// // Print:
+// // Total items ordered
+// // First item
+// // Last item
+
+// function orderFood(...food){
+//     console.log(food.length);
+//     console.log(food[0]);
+//     console.log(food[food.length-1]);   
+// }
+// orderFood("idly","dosa","sambar rice","curd rice","veg meals","biryani")
+
+// // 4. Employee Salary Filter
+// // Create array of employee objects
+// // Filter employees whose salary is above 50000
+// // Print filtered employees
+
+// let emp=[
+//     {emp1:"srinu", salary:60000},
+//     {emp2:"ram", salary:49000},
+//     {emp3:"sam", salary:70000},
+//     {emp4:"meera", salary:50000}
+// ]
+
+// let filiteredEmp=emp.filter((c,i,t)=>{
+//     return c.salary >50000;
+// })
+// console.log(filiteredEmp);
+
+// // 5. Online Game Score Board
+// // Create array of scores
+// // Use reduce()
+// // Find total score of all players
+// // Print final total
+
+// let gameScores=[90,85,89,76,54]
+
+// let finalScore=gameScores.reduce((acc,c,i,t)=>{
+//     return acc+c;
+// })
+
+// console.log(finalScore);
+
+
+// 1. API Task - User Names Uppercase
+
+// API:
+// https://jsonplaceholder.typicode.com/users
+
+// Fetch all users.
+
+// Use map()
+// Convert all usernames to UPPERCASE.
+
+// Print new array.
+
+let api="https://jsonplaceholder.typicode.com/users";
+
+fetch(api).then((data)=>{
+
+    return data.json()
+})
+.then((jsdata)=>{
+    let uppercase=jsdata.map((x)=>{
+        return x.username.toUpperCase()
+    })
+    console.log(uppercase);
+    
+})
+.catch((error)=>{
+    console.log(error);
+})
+
+// 2. API Task - Expensive Products
+
+// API:
+// https://fakestoreapi.com/products
+
+// Fetch products.
+
+// Use filter()
+// Print products price greater than 100.
+
+let api1="https://fakestoreapi.com/products"
+
+fetch(api1).then((products)=>{
+    return products.json()    
+})
+.then((productsData)=>{    
+    let filterProduct=productsData.filter((c,i,t)=>{
+        return c.price >100;
+    })
+    console.log(filterProduct);
+    
+})
+.catch((error)=>{
+    console.log(error);
+    
+})
+
+// 3. Date Concept Task - Digital Clock
+
+// Create one Date object.
+
 // Print:
-// Total items ordered
-// First item
-// Last item
+// current hours
+// current minutes
+// current seconds
 
-function orderFood(...food){
-    console.log(food.length);
-    console.log(food[0]);
-    console.log(food[food.length-1]);   
-}
-orderFood("idly","dosa","sambar rice","curd rice","veg meals","biryani")
+// Output Example:
+// 10 : 45 : 30
 
-// 4. Employee Salary Filter
-// Create array of employee objects
-// Filter employees whose salary is above 50000
-// Print filtered employees
+let date1= new Date
 
-let emp=[
-    {emp1:"srinu", salary:60000},
-    {emp2:"ram", salary:49000},
-    {emp3:"sam", salary:70000},
-    {emp4:"meera", salary:50000}
-]
+console.log(
+date1.getHours()+" : "+
+date1.getMinutes()+" : "+
+date1.getSeconds(),
+)
 
-let filiteredEmp=emp.filter((c,i,t)=>{
-    return c.salary >50000;
+// 4. String Concept Task - Username Checker
+
+// Create one string:
+// "   Naveen Kumar   "
+
+// Remove spaces using trim().
+
+// Convert into uppercase.
+
+// Check string includes "KUMAR".
+
+// Print final output.
+
+let user=" sai srinivas "
+
+let finaluser=user.trim().toUpperCase();
+
+console.log(finaluser);
+
+console.log(finaluser.includes("SAI"));
+
+
+
+// 5. Array Concept Task - Student Rank System
+
+// Create one array:
+// [450, 300, 700, 200, 900]
+
+// Sort marks high to low.
+
+// Print top 3 marks only using slice().
+
+let arr=[450,300,700,200,900]
+
+let sortval=arr.sort((a,b)=>{
+    return b-a
 })
-console.log(filiteredEmp);
 
-// 5. Online Game Score Board
-// Create array of scores
-// Use reduce()
-// Find total score of all players
-// Print final total
-
-let gameScores=[90,85,89,76,54]
-
-let finalScore=gameScores.reduce((acc,c,i,t)=>{
-    return acc+c;
-})
-
-console.log(finalScore);
+console.log(sortval.slice(0,3))
