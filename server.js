@@ -1170,7 +1170,7 @@
 // console.log(finalScore);
 
 
-// 1. API Task - User Names Uppercase
+// 1. API Task - User Names Upppercase
 
 // API:
 // https://jsonplaceholder.typicode.com/users
@@ -1182,106 +1182,342 @@
 
 // Print new array.
 
-let api="https://jsonplaceholder.typicode.com/users";
+// let api="https://jsonplaceholder.typicode.com/users";
 
-fetch(api).then((data)=>{
+// fetch(api).then((data)=>{
 
-    return data.json()
-})
-.then((jsdata)=>{
-    let uppercase=jsdata.map((x)=>{
-        return x.username.toUpperCase()
-    })
-    console.log(uppercase);
+//     return data.json()
+// })
+// .then((jsdata)=>{
+//     let uppercase=jsdata.map((x)=>{
+//         return x.username.toUpperCase()
+//     })
+//     console.log(uppercase);
     
+// })
+// .catch((error)=>{
+//     console.log(error);
+// })
+
+// // 2. API Task - Expensive Products
+
+// // API:
+// // https://fakestoreapi.com/products
+
+// // Fetch products.
+
+// // Use filter()
+// // Print products price greater than 100.
+
+// let api1="https://fakestoreapi.com/products"
+
+// fetch(api1).then((products)=>{
+//     return products.json()    
+// })
+// .then((productsData)=>{    
+//     let filterProduct=productsData.filter((c,i,t)=>{
+//         return c.price >100;
+//     })
+//     console.log(filterProduct);
+    
+// })
+// .catch((error)=>{
+//     console.log(error);
+    
+// })
+
+// // 3. Date Concept Task - Digital Clock
+
+// // Create one Date object.
+
+// // Print:
+// // current hours
+// // current minutes
+// // current seconds
+
+// // Output Example:
+// // 10 : 45 : 30
+
+// let date1= new Date
+
+// console.log(
+// date1.getHours()+" : "+
+// date1.getMinutes()+" : "+
+// date1.getSeconds(),
+// )
+
+// // 4. String Concept Task - Username Checker
+
+// // Create one string:
+// // "   Naveen Kumar   "
+
+// // Remove spaces using trim().
+
+// // Convert into uppercase.
+
+// // Check string includes "KUMAR".
+
+// // Print final output.
+
+// let user=" sai srinivas "
+
+// let finaluser=user.trim().toUpperCase();
+
+// console.log(finaluser);
+
+// console.log(finaluser.includes("SAI"));
+
+
+
+// // 5. Array Concept Task - Student Rank System
+
+// // Create one array:
+// // [450, 300, 700, 200, 900]
+
+// // Sort marks high to low.
+
+// // Print top 3 marks only using slice().
+
+// let arr=[450,300,700,200,900]
+
+// let sortval=arr.sort((a,b)=>{
+//     return b-a
+// })
+
+// console.log(sortval.slice(0,3))
+
+// Real-Time API Project Tasks
+// Beginner Tasks
+// Task 1
+// Fetch all products from API and display:
+// Product Image
+// Title
+// Price
+
+// Task 2
+// Add a loading message:
+// Loading...
+// before API data comes.
+
+// Task 3
+// If API fails:
+// Error Fetching Data
+// show inside UI.
+
+// Task 4
+// Use:
+// slice()
+// to limit:
+// title → 20 letters
+// description → 50 letters
+
+// Task 5
+// Add hover effect to product cards using CSS.
+// Intermediate Tasks
+
+// Task 6 — Search Feature
+// Create a search bar.
+// User types:
+// shirt
+// Only shirt products should appear.
+
+// Task 7 — Category Filter
+// Create category buttons:
+// electronics
+// jewelery
+// men's clothing
+// women's clothing
+// When clicked → show only that category.
+
+// Task 8 — Add To Cart
+// Add button:
+// Add To Cart
+// When clicked:
+// increase cart count
+// store product inside array
+
+// Task 9 — Remove From Cart
+// Add remove button.
+// When clicked:
+// remove item from array
+// update cart count
+// Task 10 — Total Price
+
+// Calculate total cart amount.
+// Example:
+// Total = $450
+
+let api1 = "https://fakestoreapi.com/products";
+
+let card = document.querySelector(".card");
+
+let search = document.querySelector(".search");
+
+let cartCount = document.querySelector(".cartCount");
+
+let total = document.querySelector(".total");
+
+let allProducts = [];
+
+let cart = [];
+
+
+// Loading
+
+card.innerHTML = `<h1>Loading...</h1>`;
+
+fetch(api1)
+
+.then((jsonData) => {
+    return jsonData.json();
 })
-.catch((error)=>{
+
+.then((jsData) => {
+
+    allProducts = jsData;
+    setTimeout(()=>{
+        displayProducts(allProducts);
+    },2000);
+})
+
+.catch((error) => {
+
+    card.innerHTML = `<h1>Error Fetching Data</h1>`;
+
     console.log(error);
-})
 
-// 2. API Task - Expensive Products
-
-// API:
-// https://fakestoreapi.com/products
-
-// Fetch products.
-
-// Use filter()
-// Print products price greater than 100.
-
-let api1="https://fakestoreapi.com/products"
-
-fetch(api1).then((products)=>{
-    return products.json()    
-})
-.then((productsData)=>{    
-    let filterProduct=productsData.filter((c,i,t)=>{
-        return c.price >100;
-    })
-    console.log(filterProduct);
-    
-})
-.catch((error)=>{
-    console.log(error);
-    
-})
-
-// 3. Date Concept Task - Digital Clock
-
-// Create one Date object.
-
-// Print:
-// current hours
-// current minutes
-// current seconds
-
-// Output Example:
-// 10 : 45 : 30
-
-let date1= new Date
-
-console.log(
-date1.getHours()+" : "+
-date1.getMinutes()+" : "+
-date1.getSeconds(),
-)
-
-// 4. String Concept Task - Username Checker
-
-// Create one string:
-// "   Naveen Kumar   "
-
-// Remove spaces using trim().
-
-// Convert into uppercase.
-
-// Check string includes "KUMAR".
-
-// Print final output.
-
-let user=" sai srinivas "
-
-let finaluser=user.trim().toUpperCase();
-
-console.log(finaluser);
-
-console.log(finaluser.includes("SAI"));
+});
 
 
 
-// 5. Array Concept Task - Student Rank System
+// Display Products
 
-// Create one array:
-// [450, 300, 700, 200, 900]
+function displayProducts(products){
 
-// Sort marks high to low.
+    card.innerHTML = "";
 
-// Print top 3 marks only using slice().
+    products.forEach((c) => {
 
-let arr=[450,300,700,200,900]
+        let incard = document.createElement("div");
 
-let sortval=arr.sort((a,b)=>{
-    return b-a
-})
+        incard.setAttribute("class","active");
 
-console.log(sortval.slice(0,3))
+        incard.innerHTML = `
+        
+        <h1>${c.title.slice(0,20)}...</h1>
+
+        <img src="${c.image}"/>
+
+        <p>${c.description.slice(0,50)}...</p>
+
+        <h2>$${c.price}</h2>
+
+        <button onclick="addToCart(${c.id})">
+            Add To Cart
+        </button>
+
+        <button onclick="removeFromCart(${c.id})">
+            Remove
+        </button>
+        
+        `;
+
+        card.append(incard);
+
+    });
+
+}
+
+
+
+// Search Feature
+
+search.addEventListener("input", () => {
+
+    let searchValue = search.value.toLowerCase();
+
+    let filteredProducts = allProducts.filter((product) => {
+
+        return product.title.toLowerCase().includes(searchValue);
+
+    });
+
+    displayProducts(filteredProducts);
+
+});
+
+
+
+// Category Filter
+
+function filterCategory(category){
+
+    let filteredCategory = allProducts.filter((product) => {
+
+        return product.category === category;
+
+    });
+
+    displayProducts(filteredCategory);
+
+}
+
+
+
+// Add To Cart
+
+function addToCart(id){
+
+    let product = allProducts.find((p) => {
+
+        return p.id === id;
+
+    });
+
+    cart.push(product);
+
+    updateCart();
+
+}
+
+
+
+// Remove From Cart
+
+function removeFromCart(id){
+
+    let index = cart.findIndex((p) => {
+
+        return p.id === id;
+
+    });
+
+    if(index !== -1){
+
+        cart.splice(index,1);
+
+    }
+
+    updateCart();
+
+}
+
+
+
+// Update Cart
+
+function updateCart(){
+
+    cartCount.innerHTML = `Cart : ${cart.length}`;
+
+    let totalPrice = 0;
+
+    cart.forEach((item) => {
+
+        totalPrice += item.price;
+
+    });
+
+    total.innerHTML = `Total : $${totalPrice.toFixed(2)}`;
+
+}

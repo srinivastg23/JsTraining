@@ -779,6 +779,40 @@
             <p>&copy;2026 TravelGo Agency.</p>
         </div>
         </div>  -->
+    <body>
+
+        <input type="text" placeholder="Search Products" class="search">
+
+        <div class="buttons">
+
+        <button onclick="displayProducts(allProducts)">
+            All
+        </button>
+
+        <button onclick="filterCategory('electronics')">
+            Electronics
+        </button>
+
+        <button onclick="filterCategory('jewelery')">
+            Jewelery
+        </button>
+
+        <button onclick="filterCategory(`men's clothing`)">
+            Men's Clothing
+        </button>
+
+        <button onclick="filterCategory(`women's clothing`)">
+            Women's Clothing
+        </button>
+
+        </div>
+
+        <h1 class="cartCount">Cart : 0</h1>
+
+        <h1 class="total">Total : $0</h1>
+
+        <div class="card"></div>
+        
         <script src="./server.js"></script>
 </body>
 </html>
